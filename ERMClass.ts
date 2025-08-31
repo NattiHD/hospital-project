@@ -34,6 +34,18 @@ export class ERMClass {
         return {highCount, mediumCount, lowCount};
     }
 
+    dischargePatient(patientID: string) : boolean {
+        const currentPatient: PatientClass  | undefined= this.patientQueue.find(p =>
+                                p.id === patientID);
+
+        if (!currentPatient) {
+            console.log("patient not found");
+            return false;
+        }
+
+        return currentPatient.
+    }
+
 
 
 
